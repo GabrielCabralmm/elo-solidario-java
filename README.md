@@ -299,7 +299,7 @@ A API Java roda na **Azure**: o deploy é feito por **CI/CD no Azure DevOps** em
 No **Azure Cloud Shell (Bash)**, que já vem com o Azure CLI e o `sqlcmd`:
 
 ```bash
-git clone <url do repositório> && cd elo-solidario-java
+git clone https://github.com/GabrielCabralmm/elo-solidario-java.git && cd elo-solidario-java
 bash scripts/infra-azure.sh
 ```
 
