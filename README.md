@@ -9,7 +9,7 @@ Global Solution 2026/2 · CitizenTech · FIAP 2TDS
 
 - **Deploy (Azure App Service):** https://elo-solidario-rm563230.azurewebsites.net
 - **Swagger:** https://elo-solidario-rm563230.azurewebsites.net/swagger-ui.html
-- **Deploy alternativo (Render):** <link do Render>
+- **Deploy alternativo (Render):** https://elo-solidario-java.onrender.com ([Swagger](https://elo-solidario-java.onrender.com/swagger-ui.html))
 - **Vídeo pitch (Java):** <link do YouTube>
 - **Vídeo DevOps:** <link do YouTube>
 - **Azure DevOps:** <link da organização>
