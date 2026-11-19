@@ -54,12 +54,17 @@ az sql db create \
   --service-objective Basic \
   --backup-storage-redundancy Local
 
+# Ferramenta sqlcmd (go-sqlcmd)
+mkdir -p "$HOME/bin"
+curl -sSL https://github.com/microsoft/go-sqlcmd/releases/download/v1.10.0/sqlcmd-linux-amd64.tar.bz2 | tar -xj -C "$HOME/bin"
+export PATH="$HOME/bin:$PATH"
+
 # Criação das tabelas, gatilhos e carga inicial
 sqlcmd -S "tcp:${SQL_SERVER}.database.windows.net,1433" \
   -d "$SQL_DATABASE" \
   -U "$SQL_ADMIN" \
   -P "$SQL_ADMIN_PASSWORD" \
-  -I -f 65001 -b \
+  -I -b \
   -i "${SCRIPT_DIR}/script-bd.sql"
 
 # Serviço de aplicativo (App Service Linux com Java 21)
