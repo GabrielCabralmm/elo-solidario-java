@@ -33,6 +33,10 @@ Java 21 · Spring Boot 3.5 · Spring Data JPA · Bean Validation · Spring Secur
 
 ## Arquitetura
 
+![Arquitetura da solução e esteira CI/CD](docs/arquitetura.png)
+
+Organização interna da API:
+
 ```mermaid
 flowchart LR
     APP[App Mobile<br/>React Native] -- REST + JWT --> API
@@ -347,7 +351,7 @@ Variáveis usadas na pipeline:
 
 1. Criar a tarefa no **Azure Boards**, por exemplo *"Exibir a versão da API no /status"*.
 2. Criar a branch a partir da tarefa, ou com `git checkout -b feature/<id>-descricao`.
-3. Alterar o **código-fonte**, fazer o commit com `AB#<id>` na mensagem e o push.
+3. Alterar o **código-fonte**, fazer o commit com `#<id>` na mensagem e o push.
 4. Abrir o **Pull Request** para a `main`, vinculado à tarefa, e aprová-lo como revisor (RM).
 5. Fazer o **merge**: o Build roda, publica os testes e o artefato, e a Release faz o deploy sozinha.
 6. Conferir a alteração na API publicada e fechar a tarefa, com os links de branch, commits e PR.
