@@ -288,7 +288,7 @@ A API Java roda na **Azure**: o deploy é feito por **CI/CD no Azure DevOps** em
 
 | Recurso | Nome | Configuração |
 |---|---|---|
-| Resource Group | `rg-elosolidario-rm563230` | Região `brazilsouth` (pode ser alterada pela variável `LOCATION`) |
+| Resource Group | `rg-elosolidario-rm563230` | Região `chilecentral` (Chile Central, definida na variável `LOCATION`) |
 | Azure SQL Server | `sql-elosolidario-rm563230` | Firewall: serviços da Azure + IP de quem roda o script |
 | Azure SQL Database | `db-elosolidario` | Camada Basic |
 | App Service Plan | `plan-elosolidario-rm563230` | Linux, B1 |
@@ -303,7 +303,7 @@ git clone https://github.com/GabrielCabralmm/elo-solidario-java.git && cd elo-so
 bash scripts/infra-azure.sh
 ```
 
-Antes de rodar, preencha no topo do script as variáveis `RABBITMQ_URL` (URL `amqps://` do CloudAMQP) e `AI_API_KEY` (chave do Gemini), por exemplo com `nano scripts/infra-azure.sh`. Elas ficam com `PREENCHER` no repositório porque ele é público. Se a assinatura não permitir a região padrão, troque `LOCATION` para `eastus2`.
+Antes de rodar, preencha no topo do script as variáveis `RABBITMQ_URL` (URL `amqps://` do CloudAMQP) e `AI_API_KEY` (chave do Gemini), por exemplo com `nano scripts/infra-azure.sh`. Elas ficam com `PREENCHER` no repositório porque ele é público. Se a assinatura não permitir a região padrão (`chilecentral`), troque `LOCATION` para `eastus2`.
 
 ### Azure DevOps
 

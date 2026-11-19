@@ -3,7 +3,7 @@ set -euo pipefail
 
 # Variáveis
 RM="rm563230"
-LOCATION="brazilsouth"
+LOCATION="chilecentral"
 RESOURCE_GROUP="rg-elosolidario-${RM}"
 SQL_SERVER="sql-elosolidario-${RM}"
 SQL_DATABASE="db-elosolidario"
