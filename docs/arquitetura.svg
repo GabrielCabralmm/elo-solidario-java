@@ -1,134 +1,217 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 960" font-family="DejaVu Sans, Arial, sans-serif">
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1190" viewBox="0 0 1600 1190" font-family="Inter, DejaVu Sans, sans-serif">
   <defs>
     <marker id="seta" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
-      <path d="M0 0 L10 5 L0 10 z" fill="#37474F"/>
+      <path d="M0,0 L10,5 L0,10 z" fill="#1F2937"/>
     </marker>
     <marker id="setaVerde" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
-      <path d="M0 0 L10 5 L0 10 z" fill="#2E7D4F"/>
+      <path d="M0,0 L10,5 L0,10 z" fill="#3F8F68"/>
     </marker>
+    <marker id="setaCinza" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#6B7280"/>
+    </marker>
+    <g id="pessoa">
+      <circle cx="0" cy="-14" r="11" fill="#3F8F68"/>
+      <path d="M-20,22 Q-20,0 0,0 Q20,0 20,22 z" fill="#3F8F68"/>
+    </g>
   </defs>
-  <rect width="1600" height="960" fill="#FFFFFF"/>
-  <text x="40" y="52" font-size="30" font-weight="bold" fill="#1F2A24">EloSolidário · Arquitetura macro de DevOps e nuvem</text>
-  <text x="40" y="84" font-size="17" fill="#5F6B64">API Java (Spring Boot) com CI/CD no Azure DevOps, App Service e Azure SQL provisionados por Azure CLI</text>
 
-  <rect x="40" y="110" width="1520" height="300" rx="18" fill="#EAF2FB" stroke="#1565C0" stroke-width="2"/>
-  <text x="62" y="142" font-size="19" font-weight="bold" fill="#0D47A1">Azure DevOps · projeto privado EloSolidario</text>
+  <rect width="1600" height="1190" fill="#FFFFFF"/>
 
-  <g>
-    <rect x="70" y="170" width="200" height="200" rx="14" fill="#FFFFFF" stroke="#90A4AE"/>
-    <circle cx="100" cy="200" r="16" fill="#1565C0"/><text x="100" y="206" font-size="16" fill="#fff" text-anchor="middle" font-weight="bold">1</text>
-    <text x="126" y="206" font-size="18" font-weight="bold" fill="#1F2A24">Azure Boards</text>
-    <text x="88" y="245" font-size="15" fill="#37474F">Tarefa (work item)</text>
-    <text x="88" y="270" font-size="15" fill="#37474F">vinculada a branch,</text>
-    <text x="88" y="295" font-size="15" fill="#37474F">commits e PR</text>
-    <text x="88" y="335" font-size="13" fill="#5F6B64">Commit com "AB#id"</text>
-  </g>
-  <g>
-    <rect x="330" y="170" width="300" height="200" rx="14" fill="#FFFFFF" stroke="#90A4AE"/>
-    <circle cx="360" cy="200" r="16" fill="#1565C0"/><text x="360" y="206" font-size="16" fill="#fff" text-anchor="middle" font-weight="bold">2</text>
-    <text x="386" y="206" font-size="18" font-weight="bold" fill="#1F2A24">Azure Repos (Git)</text>
-    <text x="348" y="245" font-size="15" fill="#37474F">branch feature → Pull Request</text>
-    <text x="348" y="270" font-size="15" fill="#37474F">→ merge na main protegida:</text>
-    <text x="348" y="298" font-size="14" fill="#5F6B64">• revisor obrigatório (RM563230)</text>
-    <text x="348" y="320" font-size="14" fill="#5F6B64">• work item vinculado</text>
-    <text x="348" y="342" font-size="14" fill="#5F6B64">• código importado do GitHub</text>
-  </g>
-  <g>
-    <rect x="690" y="170" width="390" height="200" rx="14" fill="#FFFFFF" stroke="#90A4AE"/>
-    <circle cx="720" cy="200" r="16" fill="#1565C0"/><text x="720" y="206" font-size="16" fill="#fff" text-anchor="middle" font-weight="bold">3</text>
-    <text x="746" y="206" font-size="18" font-weight="bold" fill="#1F2A24">Pipeline · estágio Build (CI)</text>
-    <text x="708" y="242" font-size="14" fill="#5F6B64">dispara a cada commit na main · ubuntu-latest</text>
-    <text x="708" y="270" font-size="15" fill="#37474F">Maven clean package (Java 21)</text>
-    <text x="708" y="295" font-size="15" fill="#37474F">Testes JUnit 5 + Mockito publicados</text>
-    <text x="708" y="320" font-size="15" fill="#37474F">Artefato: elo-solidario-java-*.jar</text>
-    <text x="708" y="345" font-size="15" fill="#37474F">+ pasta scripts</text>
-  </g>
-  <g>
-    <rect x="1140" y="170" width="390" height="200" rx="14" fill="#FFFFFF" stroke="#90A4AE"/>
-    <circle cx="1170" cy="200" r="16" fill="#1565C0"/><text x="1170" y="206" font-size="16" fill="#fff" text-anchor="middle" font-weight="bold">4</text>
-    <text x="1196" y="206" font-size="18" font-weight="bold" fill="#1F2A24">Pipeline · estágio Release (CD)</text>
-    <text x="1158" y="242" font-size="14" fill="#5F6B64">roda sozinho após o novo artefato</text>
-    <text x="1158" y="270" font-size="15" fill="#37474F">Ambiente "producao"</text>
-    <text x="1158" y="295" font-size="15" fill="#37474F">AzureWebApp@1: deploy do .jar</text>
-    <text x="1158" y="320" font-size="15" fill="#37474F">Variáveis secretas (grupo de variáveis)</text>
-    <text x="1158" y="345" font-size="15" fill="#37474F">Teste de fumaça: GET /status</text>
-  </g>
-  <line x1="272" y1="270" x2="326" y2="270" stroke="#37474F" stroke-width="2.5" marker-end="url(#seta)"/>
-  <line x1="632" y1="270" x2="686" y2="270" stroke="#37474F" stroke-width="2.5" marker-end="url(#seta)"/>
-  <text x="634" y="258" font-size="12" fill="#37474F">merge</text>
-  <line x1="1082" y1="270" x2="1136" y2="270" stroke="#37474F" stroke-width="2.5" marker-end="url(#seta)"/>
-  <text x="1082" y="258" font-size="12" fill="#37474F">.jar</text>
+  <!-- Título -->
+  <text x="40" y="44" font-size="28" font-weight="700" fill="#111827">EloSolidário — Arquitetura da solução e esteira CI/CD</text>
+  <text x="40" y="72" font-size="16" fill="#4B5563">API Java (Spring Boot) publicada no Azure App Service com banco Azure SQL, entregue pelo Azure Pipelines (Build + Release) a partir do Azure Boards e Repos</text>
 
-  <rect x="290" y="450" width="850" height="380" rx="18" fill="#EDF6EF" stroke="#2E7D4F" stroke-width="2"/>
-  <text x="520" y="482" font-size="19" font-weight="bold" fill="#1B5E20">Microsoft Azure · rg-elosolidario</text>
-  <text x="520" y="506" font-size="14" fill="#5F6B64">Criado pelo script scripts/infra-azure.sh (Azure CLI)</text>
+  <!-- Desenvolvedor -->
+  <rect x="40" y="110" width="250" height="190" rx="14" fill="#ECF6F0" stroke="#3F8F68" stroke-width="2"/>
+  <use href="#pessoa" x="80" y="160"/>
+  <text x="112" y="152" font-size="18" font-weight="700" fill="#111827">Desenvolvedor</text>
+  <text x="112" y="174" font-size="14" fill="#374151">Gabriel / João</text>
+  <rect x="58" y="200" width="214" height="82" rx="8" fill="#FFFFFF" stroke="#9CA3AF"/>
+  <text x="72" y="224" font-size="15" font-weight="600" fill="#111827">IDE / editor do Repos</text>
+  <text x="72" y="246" font-size="13" fill="#374151">Java 21 + Maven</text>
+  <text x="72" y="266" font-size="13" fill="#374151">branch · commit · push</text>
 
-  <g>
-    <rect x="320" y="540" width="360" height="250" rx="14" fill="#FFFFFF" stroke="#2E7D4F" stroke-width="1.5"/>
-    <circle cx="350" cy="570" r="16" fill="#2E7D4F"/><text x="350" y="576" font-size="16" fill="#fff" text-anchor="middle" font-weight="bold">5</text>
-    <text x="376" y="576" font-size="18" font-weight="bold" fill="#1F2A24">App Service (Linux · B1)</text>
-    <text x="338" y="612" font-size="15" fill="#37474F">elo-solidario</text>
-    <text x="338" y="637" font-size="15" fill="#37474F">Java 21 · Spring Boot 3.5</text>
-    <text x="338" y="666" font-size="14" fill="#5F6B64">• REST + JWT (3 perfis) + Swagger</text>
-    <text x="338" y="688" font-size="14" fill="#5F6B64">• Spring Data JPA</text>
-    <text x="338" y="710" font-size="14" fill="#5F6B64">• Spring AI (assistente de doação)</text>
-    <text x="338" y="732" font-size="14" fill="#5F6B64">• RabbitMQ (eventos de reserva)</text>
-    <text x="338" y="764" font-size="13" fill="#5F6B64">App Settings: DB_URL, JWT_SECRET...</text>
-  </g>
-  <g>
-    <rect x="740" y="540" width="370" height="250" rx="14" fill="#FFFFFF" stroke="#2E7D4F" stroke-width="1.5"/>
-    <circle cx="770" cy="570" r="16" fill="#2E7D4F"/><text x="770" y="576" font-size="16" fill="#fff" text-anchor="middle" font-weight="bold">6</text>
-    <text x="796" y="576" font-size="18" font-weight="bold" fill="#1F2A24">Azure SQL Database</text>
-    <text x="758" y="612" font-size="15" fill="#37474F">sql-elosolidario</text>
-    <text x="758" y="637" font-size="15" fill="#37474F">db-elosolidario (Basic)</text>
-    <text x="758" y="666" font-size="14" fill="#5F6B64">• 8 tabelas TB_ELO_*</text>
-    <text x="758" y="688" font-size="14" fill="#5F6B64">• gatilho de auditoria</text>
-    <text x="758" y="710" font-size="14" fill="#5F6B64">• gatilho de reservas</text>
-    <text x="758" y="732" font-size="14" fill="#5F6B64">• carga inicial</text>
-    <text x="758" y="764" font-size="13" fill="#5F6B64">scripts/script-bd.sql (T-SQL)</text>
-  </g>
-  <line x1="682" y1="665" x2="736" y2="665" stroke="#2E7D4F" stroke-width="2.5" marker-end="url(#setaVerde)" marker-start="url(#setaVerde)"/>
-  <text x="710" y="652" font-size="11" fill="#2E7D4F" text-anchor="middle">JDBC</text>
+  <!-- Professor -->
+  <rect x="40" y="340" width="250" height="106" rx="14" fill="#FFFFFF" stroke="#9CA3AF" stroke-width="1.5"/>
+  <text x="58" y="368" font-size="16" font-weight="700" fill="#111827">Professor</text>
+  <text x="58" y="392" font-size="13" fill="#374151">Basic na organização e</text>
+  <text x="58" y="410" font-size="13" fill="#374151">Project Administrators: Boards,</text>
+  <text x="58" y="428" font-size="13" fill="#374151">Repos, Pipelines e execuções</text>
 
-  <path d="M1335 372 L1335 420 L500 420 L500 536" fill="none" stroke="#37474F" stroke-width="2.5" stroke-dasharray="8 6" marker-end="url(#seta)"/>
-  <text x="1000" y="440" font-size="13" fill="#37474F">deploy automático do pacote</text>
+  <!-- Azure DevOps -->
+  <rect x="360" y="96" width="1200" height="304" rx="16" fill="#EFF6FF" stroke="#0078D4" stroke-width="2"/>
+  <text x="384" y="128" font-size="20" font-weight="700" fill="#0B4A8B">Azure DevOps</text>
+  <text x="550" y="128" font-size="14" fill="#1E3A5F">Projeto privado “EloSolidario” · Boards · Repos · Pipelines</text>
 
-  <g>
-    <rect x="40" y="560" width="210" height="200" rx="14" fill="#FFF8EC" stroke="#F28C38" stroke-width="1.5"/>
-    <text x="145" y="592" font-size="17" font-weight="bold" fill="#1F2A24" text-anchor="middle">Usuários</text>
-    <text x="145" y="630" font-size="14" fill="#37474F" text-anchor="middle">App Mobile</text>
-    <text x="145" y="650" font-size="14" fill="#37474F" text-anchor="middle">(React Native)</text>
-    <text x="145" y="690" font-size="14" fill="#37474F" text-anchor="middle">Swagger / Postman</text>
-    <text x="145" y="730" font-size="13" fill="#5F6B64" text-anchor="middle">doador · beneficiário</text>
-    <text x="145" y="748" font-size="13" fill="#5F6B64" text-anchor="middle">admin</text>
-  </g>
-  <line x1="252" y1="665" x2="316" y2="665" stroke="#F28C38" stroke-width="2.5" marker-end="url(#seta)"/>
-  <text x="270" y="645" font-size="10" fill="#C66A1C" text-anchor="middle">HTTPS</text><text x="270" y="684" font-size="10" fill="#C66A1C" text-anchor="middle">JWT</text>
+  <rect x="380" y="146" width="190" height="234" rx="12" fill="#FFFFFF" stroke="#0078D4" stroke-width="1.5"/>
+  <text x="398" y="174" font-size="17" font-weight="700" fill="#0B4A8B">Boards + Repos</text>
+  <text x="398" y="196" font-size="13" fill="#6B7280">elo-solidario-devops</text>
+  <text x="398" y="224" font-size="14" fill="#111827">• Tarefa (work item)</text>
+  <text x="398" y="248" font-size="14" fill="#111827">• Branch feature</text>
+  <text x="398" y="272" font-size="14" fill="#111827">• Pull Request</text>
+  <text x="398" y="296" font-size="14" fill="#111827">• Merge na main</text>
+  <rect x="396" y="310" width="158" height="22" rx="11" fill="#111827"/>
+  <text x="475" y="326" font-size="12" font-weight="600" fill="#FFFFFF" text-anchor="middle">main protegida</text>
+  <text x="398" y="352" font-size="11" fill="#6B7280">revisor RM563230</text>
+  <text x="398" y="368" font-size="11" fill="#6B7280">1 aprovação · work item</text>
 
-  <rect x="1180" y="450" width="380" height="380" rx="18" fill="#F5F5F5" stroke="#9E9E9E" stroke-width="2"/>
-  <text x="1202" y="482" font-size="19" font-weight="bold" fill="#424242">Serviços externos</text>
-  <g>
-    <rect x="1210" y="510" width="320" height="130" rx="14" fill="#FFFFFF" stroke="#9E9E9E"/>
-    <text x="1230" y="545" font-size="17" font-weight="bold" fill="#1F2A24">CloudAMQP (RabbitMQ)</text>
-    <text x="1230" y="575" font-size="14" fill="#5F6B64">exchange elo.reservas</text>
-    <text x="1230" y="597" font-size="14" fill="#5F6B64">fila elo.notificacoes</text>
-    <text x="1230" y="619" font-size="14" fill="#5F6B64">AMQPS</text>
-  </g>
-  <g>
-    <rect x="1210" y="665" width="320" height="130" rx="14" fill="#FFFFFF" stroke="#9E9E9E"/>
-    <text x="1230" y="700" font-size="17" font-weight="bold" fill="#1F2A24">Google Gemini</text>
-    <text x="1230" y="730" font-size="14" fill="#5F6B64">gemini-3.5-flash-lite</text>
-    <text x="1230" y="752" font-size="14" fill="#5F6B64">API compatível com OpenAI</text>
-    <text x="1230" y="774" font-size="14" fill="#5F6B64">(Spring AI)</text>
-  </g>
-  <path d="M600 538 V520 H1160 L1206 560" fill="none" stroke="#757575" stroke-width="2" stroke-dasharray="5 5" marker-end="url(#seta)"/><text x="950" y="514" font-size="12" fill="#616161">eventos de reserva (AMQPS)</text>
-  <path d="M600 792 V812 H1160 L1206 760" fill="none" stroke="#757575" stroke-width="2" stroke-dasharray="5 5" marker-end="url(#seta)"/><text x="900" y="828" font-size="12" fill="#616161">sugestões de itens (HTTPS)</text>
+  <rect x="600" y="146" width="322" height="234" rx="12" fill="#FFFFFF" stroke="#0078D4" stroke-width="1.5"/>
+  <text x="620" y="174" font-size="17" font-weight="700" fill="#0B4A8B">Build (CI) · estágio Build</text>
+  <text x="620" y="196" font-size="13" fill="#6B7280">azure-pipeline.yml · ubuntu-latest</text>
+  <text x="620" y="226" font-size="14" fill="#111827">• Cache das dependências Maven</text>
+  <text x="620" y="252" font-size="14" fill="#111827">• Maven clean package (Java 21)</text>
+  <text x="620" y="278" font-size="14" fill="#111827">• Testes JUnit 5 + Mockito</text>
+  <text x="620" y="304" font-size="14" fill="#111827">• Publica os resultados JUnit</text>
+  <text x="620" y="330" font-size="14" fill="#111827">• Copy Files + Publish Artifact</text>
+  <text x="620" y="364" font-size="12" fill="#6B7280">Trigger: merge na main · pr: none</text>
 
-  <text x="40" y="872" font-size="17" font-weight="bold" fill="#1F2A24">Legenda</text>
-  <rect x="40" y="890" width="22" height="22" rx="4" fill="#EAF2FB" stroke="#1565C0"/><text x="72" y="907" font-size="14" fill="#37474F">Azure DevOps (Boards, Repos, Pipelines)</text>
-  <rect x="380" y="890" width="22" height="22" rx="4" fill="#EDF6EF" stroke="#2E7D4F"/><text x="412" y="907" font-size="14" fill="#37474F">Recursos na Azure criados por script</text>
-  <rect x="690" y="890" width="22" height="22" rx="4" fill="#F5F5F5" stroke="#9E9E9E"/><text x="722" y="907" font-size="14" fill="#37474F">Serviços externos</text>
-  <line x1="880" y1="901" x2="930" y2="901" stroke="#37474F" stroke-width="2.5" marker-end="url(#seta)"/><text x="940" y="907" font-size="14" fill="#37474F">fluxo do código</text>
-  <line x1="1080" y1="901" x2="1130" y2="901" stroke="#37474F" stroke-width="2.5" stroke-dasharray="8 6" marker-end="url(#seta)"/><text x="1140" y="907" font-size="14" fill="#37474F">deploy / integração</text>
-  <text x="40" y="940" font-size="14" fill="#5F6B64">Fluxo: 1 tarefa no Boards → 2 branch + PR aprovado e merge na main → 3 Build com testes e artefato → 4 Release automática → 5 API no App Service → 6 dados no Azure SQL</text>
+  <rect x="950" y="196" width="130" height="120" rx="12" fill="#FFF7E6" stroke="#D97706" stroke-width="1.5"/>
+  <rect x="992" y="212" width="46" height="38" rx="4" fill="#D97706"/>
+  <path d="M992,224 h46 M1015,212 v12" stroke="#FFF7E6" stroke-width="2"/>
+  <text x="1015" y="274" font-size="15" font-weight="700" fill="#92400E" text-anchor="middle">Artefato</text>
+  <text x="1015" y="292" font-size="11" fill="#92400E" text-anchor="middle">elo-solidario-java</text>
+  <text x="1015" y="306" font-size="11" fill="#92400E" text-anchor="middle">.jar + scripts</text>
+
+  <rect x="1110" y="146" width="430" height="156" rx="12" fill="#FFFFFF" stroke="#0078D4" stroke-width="1.5"/>
+  <text x="1130" y="174" font-size="17" font-weight="700" fill="#0B4A8B">Release (CD) · estágio Release</text>
+  <text x="1130" y="196" font-size="13" fill="#6B7280">environment producao · roda sozinho após o Build</text>
+  <text x="1130" y="222" font-size="14" fill="#111827">• Baixa o artefato novo do CI</text>
+  <text x="1130" y="244" font-size="14" fill="#111827">• AzureWebApp@1: deploy do .jar (Java 21)</text>
+  <text x="1130" y="266" font-size="14" fill="#111827">• App settings com as variáveis secretas</text>
+  <text x="1130" y="288" font-size="14" fill="#111827">• Teste de fumaça: GET /status</text>
+
+  <rect x="1110" y="316" width="430" height="68" rx="12" fill="#FDF2F8" stroke="#BE185D" stroke-width="1.5"/>
+  <rect x="1128" y="338" width="22" height="18" rx="3" fill="#BE185D"/>
+  <path d="M1132,338 v-6 a7,7 0 0 1 14,0 v6" stroke="#BE185D" stroke-width="3" fill="none"/>
+  <text x="1162" y="342" font-size="15" font-weight="700" fill="#831843">Variáveis · grupo elo-solidario-segredos</text>
+  <text x="1162" y="364" font-size="12" fill="#9D174D">DB_URL, DB_PASSWORD, JWT_SECRET, RABBITMQ_URL,</text>
+  <text x="1162" y="378" font-size="12" fill="#9D174D">AI_API_KEY (cadeado: secretas)</text>
+
+  <!-- Microsoft Azure -->
+  <rect x="360" y="450" width="820" height="420" rx="16" fill="#F0F9FF" stroke="#0078D4" stroke-width="2" stroke-dasharray="8 6"/>
+  <text x="384" y="482" font-size="20" font-weight="700" fill="#0B4A8B">Microsoft Azure</text>
+  <text x="552" y="482" font-size="14" fill="#1E3A5F">rg-elosolidario · Chile Central</text>
+
+  <rect x="380" y="506" width="420" height="250" rx="12" fill="#FFFFFF" stroke="#0078D4" stroke-width="1.5"/>
+  <text x="400" y="534" font-size="14" font-weight="600" fill="#1E3A5F">Plano do App Service · plan-elosolidario (Linux B1)</text>
+  <rect x="400" y="550" width="380" height="186" rx="10" fill="#E0F2FE" stroke="#0369A1"/>
+  <rect x="420" y="572" width="44" height="34" rx="4" fill="#0078D4"/>
+  <path d="M420,582 h44" stroke="#FFFFFF" stroke-width="2"/>
+  <circle cx="427" cy="577" r="2" fill="#FFFFFF"/><circle cx="434" cy="577" r="2" fill="#FFFFFF"/>
+  <text x="478" y="586" font-size="17" font-weight="700" fill="#0B4A8B">Web App · elo-solidario</text>
+  <text x="478" y="606" font-size="13" fill="#1E3A5F">Java 21 (Java SE) · sem container</text>
+  <text x="420" y="640" font-size="14" fill="#111827">• Spring Boot 3.5 + Spring Security + JWT</text>
+  <text x="420" y="664" font-size="14" fill="#111827">• Perfis: doador, beneficiário e admin</text>
+  <text x="420" y="688" font-size="14" fill="#111827">• REST + Swagger · Spring Data JPA</text>
+  <text x="420" y="712" font-size="14" fill="#111827">• Spring AI (Gemini) · RabbitMQ</text>
+
+  <rect x="840" y="506" width="320" height="250" rx="12" fill="#FFFFFF" stroke="#0078D4" stroke-width="1.5"/>
+  <ellipse cx="886" cy="550" rx="26" ry="9" fill="#0B5CAD"/>
+  <rect x="860" y="550" width="52" height="40" fill="#0B5CAD"/>
+  <ellipse cx="886" cy="590" rx="26" ry="9" fill="#0B5CAD"/>
+  <ellipse cx="886" cy="550" rx="26" ry="9" fill="#4A9BE0"/>
+  <text x="926" y="556" font-size="17" font-weight="700" fill="#0B4A8B">Azure SQL</text>
+  <text x="926" y="578" font-size="17" font-weight="700" fill="#0B4A8B">Database</text>
+  <text x="860" y="626" font-size="13" fill="#1E3A5F">PaaS · sql-elosolidario · Basic</text>
+  <text x="860" y="650" font-size="14" fill="#111827">Banco db-elosolidario</text>
+  <text x="860" y="674" font-size="14" fill="#111827">8 tabelas TB_ELO_*</text>
+  <text x="860" y="698" font-size="14" fill="#111827">gatilhos de auditoria e reservas</text>
+  <text x="860" y="722" font-size="13" fill="#6B7280">scripts/script-bd.sql (T-SQL)</text>
+
+  <rect x="380" y="780" width="780" height="70" rx="12" fill="#FFFFFF" stroke="#6B7280" stroke-width="1.5"/>
+  <rect x="400" y="798" width="40" height="32" rx="4" fill="#1F2937"/>
+  <path d="M408,808 l8,6 l-8,6 M420,822 h12" stroke="#FFFFFF" stroke-width="2" fill="none"/>
+  <text x="456" y="810" font-size="16" font-weight="700" fill="#111827">Azure CLI (Cloud Shell) · scripts/infra-azure.sh</text>
+  <text x="456" y="832" font-size="14" fill="#374151">cria o grupo de recursos, o Azure SQL, o firewall, o banco, o plano, o Web App e as variáveis</text>
+
+  <!-- Serviços externos -->
+  <rect x="1210" y="450" width="350" height="420" rx="16" fill="#F9FAFB" stroke="#6B7280" stroke-width="2" stroke-dasharray="8 6"/>
+  <text x="1234" y="482" font-size="20" font-weight="700" fill="#374151">Serviços externos</text>
+
+  <rect x="1230" y="506" width="310" height="124" rx="12" fill="#FFFFFF" stroke="#6B7280" stroke-width="1.5"/>
+  <rect x="1250" y="526" width="40" height="34" rx="6" fill="#EA580C"/>
+  <text x="1270" y="548" font-size="13" font-weight="700" fill="#FFFFFF" text-anchor="middle">MQ</text>
+  <text x="1302" y="540" font-size="16" font-weight="700" fill="#111827">CloudAMQP</text>
+  <text x="1302" y="558" font-size="13" fill="#374151">RabbitMQ gerenciado</text>
+  <text x="1250" y="588" font-size="13" fill="#111827">exchange elo.reservas</text>
+  <text x="1250" y="608" font-size="13" fill="#111827">fila elo.notificacoes · AMQPS</text>
+
+  <rect x="1230" y="650" width="310" height="124" rx="12" fill="#FFFFFF" stroke="#6B7280" stroke-width="1.5"/>
+  <rect x="1250" y="670" width="40" height="34" rx="6" fill="#4F46E5"/>
+  <text x="1270" y="692" font-size="13" font-weight="700" fill="#FFFFFF" text-anchor="middle">IA</text>
+  <text x="1302" y="684" font-size="16" font-weight="700" fill="#111827">Google Gemini</text>
+  <text x="1302" y="702" font-size="13" fill="#374151">gemini-3.5-flash-lite</text>
+  <text x="1250" y="732" font-size="13" fill="#111827">assistente de doação (Spring AI)</text>
+  <text x="1250" y="752" font-size="13" fill="#111827">API compatível com OpenAI · HTTPS</text>
+
+  <text x="1234" y="810" font-size="12" fill="#6B7280">As chaves de acesso ficam nas</text>
+  <text x="1234" y="828" font-size="12" fill="#6B7280">variáveis secretas da pipeline</text>
+  <text x="1234" y="846" font-size="12" fill="#6B7280">e nas App Settings do Web App.</text>
+
+  <!-- Usuários finais -->
+  <rect x="40" y="560" width="250" height="250" rx="14" fill="#ECF6F0" stroke="#3F8F68" stroke-width="2"/>
+  <text x="60" y="592" font-size="18" font-weight="700" fill="#111827">Usuários finais</text>
+  <text x="60" y="612" font-size="13" fill="#4B5563">app mobile · Swagger · HTTPS</text>
+  <use href="#pessoa" x="82" y="660"/>
+  <text x="112" y="666" font-size="15" fill="#111827">Doador</text>
+  <use href="#pessoa" x="82" y="716"/>
+  <text x="112" y="722" font-size="15" fill="#111827">Beneficiário</text>
+  <use href="#pessoa" x="82" y="772"/>
+  <text x="112" y="778" font-size="15" fill="#111827">Administrador</text>
+
+  <!-- Setas -->
+  <path d="M290,240 H380" stroke="#1F2937" stroke-width="2.5" fill="none" marker-end="url(#seta)"/>
+  <path d="M570,256 H600" stroke="#1F2937" stroke-width="2.5" fill="none" marker-end="url(#seta)"/>
+  <path d="M922,256 H950" stroke="#1F2937" stroke-width="2.5" fill="none" marker-end="url(#seta)"/>
+  <path d="M1080,226 H1110" stroke="#1F2937" stroke-width="2.5" fill="none" marker-end="url(#seta)"/>
+  <path d="M1325,316 V302" stroke="#BE185D" stroke-width="2.5" fill="none" marker-end="url(#seta)"/>
+  <path d="M1540,216 H1552 V420 H820 V590 H780" stroke="#1F2937" stroke-width="2.5" fill="none" marker-end="url(#seta)"/>
+  <path d="M780,662 H840" stroke="#1F2937" stroke-width="2.5" fill="none" marker-end="url(#seta)"/>
+  <path d="M700,736 V768 H1195 V568 H1230" stroke="#6B7280" stroke-width="2" stroke-dasharray="6 5" fill="none" marker-end="url(#setaCinza)"/>
+  <path d="M1195,712 H1230" stroke="#6B7280" stroke-width="2" stroke-dasharray="6 5" fill="none" marker-end="url(#setaCinza)"/>
+  <path d="M290,690 H400" stroke="#3F8F68" stroke-width="3" fill="none" marker-end="url(#setaVerde)"/>
+  <path d="M290,285 H315 V815 H380" stroke="#6B7280" stroke-width="2" stroke-dasharray="6 5" fill="none" marker-end="url(#setaCinza)"/>
+  <path d="M290,393 H360" stroke="#9CA3AF" stroke-width="2" stroke-dasharray="4 4" fill="none" marker-end="url(#seta)"/>
+
+  <g font-size="14" font-weight="700" fill="#FFFFFF" text-anchor="middle">
+    <circle cx="345" cy="815" r="14" fill="#6B7280"/><text x="345" y="820">0</text>
+    <circle cx="335" cy="240" r="14" fill="#E4572E"/><text x="335" y="245">1</text>
+    <circle cx="585" cy="256" r="14" fill="#E4572E"/><text x="585" y="261">2</text>
+    <circle cx="600" cy="320" r="14" fill="#E4572E"/><text x="600" y="325">3</text>
+    <circle cx="936" cy="256" r="14" fill="#E4572E"/><text x="936" y="261">4</text>
+    <circle cx="1095" cy="226" r="14" fill="#E4572E"/><text x="1095" y="231">5</text>
+    <circle cx="1325" cy="316" r="14" fill="#E4572E"/><text x="1325" y="321">6</text>
+    <circle cx="820" cy="500" r="14" fill="#E4572E"/><text x="820" y="505">7</text>
+    <circle cx="810" cy="662" r="14" fill="#E4572E"/><text x="810" y="667">8</text>
+    <circle cx="1195" cy="640" r="14" fill="#6B7280"/><text x="1195" y="645">9</text>
+    <circle cx="336" cy="690" r="14" fill="#3F8F68"/><text x="336" y="695">10</text>
+  </g>
+  <text x="1540" y="412" font-size="13" font-weight="600" fill="#1F2937" text-anchor="end">deploy do .jar no App Service</text>
+  <text x="810" y="696" font-size="13" font-weight="600" fill="#1F2937" text-anchor="middle">JDBC</text>
+
+  <!-- Ordem do fluxo -->
+  <rect x="40" y="900" width="1520" height="250" rx="14" fill="#F9FAFB" stroke="#E5E7EB"/>
+  <text x="64" y="932" font-size="17" font-weight="700" fill="#111827">Ordem do fluxo</text>
+  <g font-size="14" fill="#111827">
+    <text x="64" y="962"><tspan font-weight="700">0.</tspan> O desenvolvedor cria os recursos no Azure com o Azure CLI (uma vez).</text>
+    <text x="64" y="990"><tspan font-weight="700">1.</tspan> Cria a tarefa no Boards, a branch, o commit e o Pull Request no Azure Repos.</text>
+    <text x="64" y="1018"><tspan font-weight="700">2.</tspan> O PR aprovado faz o merge na main, que dispara o Build (CI) sozinho.</text>
+    <text x="64" y="1046"><tspan font-weight="700">3.</tspan> O CI compila com Maven e Java 21 e roda os testes automatizados.</text>
+    <text x="64" y="1074"><tspan font-weight="700">4.</tspan> O CI publica o artefato (.jar e scripts) e os resultados dos testes.</text>
+    <text x="64" y="1102"><tspan font-weight="700">5.</tspan> O novo artefato dispara automaticamente a Release (CD).</text>
+    <text x="820" y="962"><tspan font-weight="700">6.</tspan> A Release lê as credenciais nas variáveis secretas.</text>
+    <text x="820" y="990"><tspan font-weight="700">7.</tspan> A Release faz o deploy do .jar no Web App e roda o teste de fumaça.</text>
+    <text x="820" y="1018"><tspan font-weight="700">8.</tspan> A API grava e lê os dados no Azure SQL, onde os gatilhos auditam as doações.</text>
+    <text x="820" y="1046"><tspan font-weight="700">9.</tspan> A API publica eventos de reserva no CloudAMQP e consulta o Gemini.</text>
+    <text x="820" y="1074"><tspan font-weight="700">10.</tspan> Doador, beneficiário e admin acessam por HTTPS com JWT e fazem o CRUD.</text>
+  </g>
+  <g font-size="12" fill="#4B5563">
+    <path d="M820,1104 H858" stroke="#1F2937" stroke-width="2.5" marker-end="url(#seta)"/>
+    <text x="866" y="1108">fluxo do código e do deploy</text>
+    <path d="M1040,1104 H1078" stroke="#6B7280" stroke-width="2" stroke-dasharray="6 5" marker-end="url(#setaCinza)"/>
+    <text x="1086" y="1108">provisionamento / integração</text>
+    <path d="M1270,1104 H1308" stroke="#3F8F68" stroke-width="3" marker-end="url(#setaVerde)"/>
+    <text x="1316" y="1108">acesso dos usuários</text>
+    <text x="820" y="1132">Caixa azul contínua: Azure DevOps · tracejada azul: recursos na Azure · tracejada cinza: serviços externos</text>
+  </g>
 </svg>
