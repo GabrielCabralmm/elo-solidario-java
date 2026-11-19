@@ -303,7 +303,7 @@ git clone https://github.com/GabrielCabralmm/elo-solidario-java.git && cd elo-so
 bash scripts/infra-azure.sh
 ```
 
-O script pede as senhas e as chaves sem mostrá-las na tela, e nenhuma credencial fica gravada no repositório. Se a assinatura não permitir a região padrão, rode `LOCATION=eastus2 bash scripts/infra-azure.sh`.
+Antes de rodar, preencha no topo do script as variáveis `RABBITMQ_URL` (URL `amqps://` do CloudAMQP) e `AI_API_KEY` (chave do Gemini), por exemplo com `nano scripts/infra-azure.sh`. Elas ficam com `PREENCHER` no repositório porque ele é público. Se a assinatura não permitir a região padrão, troque `LOCATION` para `eastus2`.
 
 ### Azure DevOps
 

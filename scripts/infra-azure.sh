@@ -2,34 +2,19 @@
 set -euo pipefail
 
 # Variáveis
-RM="${RM:-rm563230}"
-LOCATION="${LOCATION:-brazilsouth}"
+RM="rm563230"
+LOCATION="brazilsouth"
 RESOURCE_GROUP="rg-elosolidario-${RM}"
 SQL_SERVER="sql-elosolidario-${RM}"
 SQL_DATABASE="db-elosolidario"
-SQL_ADMIN="${SQL_ADMIN:-elosolidarioadmin}"
+SQL_ADMIN="elosolidarioadmin"
+SQL_ADMIN_PASSWORD="EloSolidario@2026"
 APP_SERVICE_PLAN="plan-elosolidario-${RM}"
 WEB_APP="elo-solidario-${RM}"
+JWT_SECRET="ksGqsJt0cGK6Jd8UkBBOzktvdLkrSTOuBAf2PKGt9dLHtuoB"
+RABBITMQ_URL="PREENCHER"
+AI_API_KEY="PREENCHER"
 SCRIPT_DIR="$(cd "$(dirname "$0")" && pwd)"
-
-# Segredos (lidos do ambiente ou digitados, nunca gravados no código)
-if [ -z "${SQL_ADMIN_PASSWORD:-}" ]; then
-  read -r -s -p "Senha do administrador do Azure SQL (mín. 8 caracteres, com maiúscula, minúscula, número e símbolo): " SQL_ADMIN_PASSWORD
-  echo
-fi
-if [ -z "${JWT_SECRET:-}" ]; then
-  JWT_SECRET="$(openssl rand -base64 48 | tr -d '\n')"
-  echo "JWT_SECRET gerado automaticamente. Guarde este valor para a variável da pipeline:"
-  echo "$JWT_SECRET"
-fi
-if [ -z "${RABBITMQ_URL:-}" ]; then
-  read -r -s -p "URL do RabbitMQ (CloudAMQP, amqps://...): " RABBITMQ_URL
-  echo
-fi
-if [ -z "${AI_API_KEY:-}" ]; then
-  read -r -s -p "Chave da API do Gemini: " AI_API_KEY
-  echo
-fi
 
 DB_URL="jdbc:sqlserver://${SQL_SERVER}.database.windows.net:1433;databaseName=${SQL_DATABASE};encrypt=true;trustServerCertificate=false;hostNameInCertificate=*.database.windows.net;loginTimeout=30"
 
