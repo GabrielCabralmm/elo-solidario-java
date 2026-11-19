@@ -7,8 +7,8 @@ Global Solution 2026/2 · CitizenTech · FIAP 2TDS
 | Gabriel Cabral Mendes Mariano | 563230 | 2TDSPO |
 | João Victor Santana dos Santos | 566063 | 2TDSPX |
 
-- **Deploy (Azure App Service):** https://elo-solidario-rm563230.azurewebsites.net
-- **Swagger:** https://elo-solidario-rm563230.azurewebsites.net/swagger-ui.html
+- **Deploy (Azure App Service):** https://elo-solidario.azurewebsites.net
+- **Swagger:** https://elo-solidario.azurewebsites.net/swagger-ui.html
 - **Deploy alternativo (Render):** https://elo-solidario-java.onrender.com ([Swagger](https://elo-solidario-java.onrender.com/swagger-ui.html))
 - **Vídeo pitch (Java):** <link do YouTube>
 - **Vídeo DevOps:** <link do YouTube>
@@ -288,11 +288,11 @@ A API Java roda na **Azure**: o deploy é feito por **CI/CD no Azure DevOps** em
 
 | Recurso | Nome | Configuração |
 |---|---|---|
-| Resource Group | `rg-elosolidario-rm563230` | Região `chilecentral` (Chile Central, definida na variável `LOCATION`) |
-| Azure SQL Server | `sql-elosolidario-rm563230` | Firewall: serviços da Azure + IP de quem roda o script |
+| Resource Group | `rg-elosolidario` | Região `chilecentral` (Chile Central, definida na variável `LOCATION`) |
+| Azure SQL Server | `sql-elosolidario` | Firewall: serviços da Azure + IP de quem roda o script |
 | Azure SQL Database | `db-elosolidario` | Camada Basic |
-| App Service Plan | `plan-elosolidario-rm563230` | Linux, B1 |
-| Web App | `elo-solidario-rm563230` | Java 21 (Java SE), Always On, com as variáveis de ambiente da API |
+| App Service Plan | `plan-elosolidario` | Linux, B1 |
+| Web App | `elo-solidario` | Java 21 (Java SE), Always On, com as variáveis de ambiente da API |
 
 ### Como provisionar
 
@@ -325,7 +325,7 @@ O script cria ou configura:
 - a **pipeline** apontando para `azure-pipeline.yml`;
 - o professor com licença **Basic** e no grupo **Project Administrators**.
 
-Falta um passo manual: criar a **service connection** do tipo *Azure Resource Manager* chamada `conexao-azure-elosolidario`, em **Project Settings → Service connections**, com a assinatura e o Resource Group `rg-elosolidario-rm563230`.
+Falta um passo manual: criar a **service connection** do tipo *Azure Resource Manager* chamada `conexao-azure-elosolidario`, em **Project Settings → Service connections**, com a assinatura e o Resource Group `rg-elosolidario`.
 
 ### Pipeline (`azure-pipeline.yml`)
 
@@ -354,7 +354,7 @@ Variáveis usadas na pipeline:
 
 ### CRUD em duas tabelas (JSON)
 
-Base: `https://elo-solidario-rm563230.azurewebsites.net`. Primeiro faça o login e use o token em `Authorization: Bearer <token>`:
+Base: `https://elo-solidario.azurewebsites.net`. Primeiro faça o login e use o token em `Authorization: Bearer <token>`:
 
 ```json
 POST /auth/login

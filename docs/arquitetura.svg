@@ -60,14 +60,14 @@
   <text x="1082" y="258" font-size="12" fill="#37474F">.jar</text>
 
   <rect x="290" y="450" width="850" height="380" rx="18" fill="#EDF6EF" stroke="#2E7D4F" stroke-width="2"/>
-  <text x="520" y="482" font-size="19" font-weight="bold" fill="#1B5E20">Microsoft Azure · rg-elosolidario-rm563230</text>
+  <text x="520" y="482" font-size="19" font-weight="bold" fill="#1B5E20">Microsoft Azure · rg-elosolidario</text>
   <text x="520" y="506" font-size="14" fill="#5F6B64">Criado pelo script scripts/infra-azure.sh (Azure CLI)</text>
 
   <g>
     <rect x="320" y="540" width="360" height="250" rx="14" fill="#FFFFFF" stroke="#2E7D4F" stroke-width="1.5"/>
     <circle cx="350" cy="570" r="16" fill="#2E7D4F"/><text x="350" y="576" font-size="16" fill="#fff" text-anchor="middle" font-weight="bold">5</text>
     <text x="376" y="576" font-size="18" font-weight="bold" fill="#1F2A24">App Service (Linux · B1)</text>
-    <text x="338" y="612" font-size="15" fill="#37474F">elo-solidario-rm563230</text>
+    <text x="338" y="612" font-size="15" fill="#37474F">elo-solidario</text>
     <text x="338" y="637" font-size="15" fill="#37474F">Java 21 · Spring Boot 3.5</text>
     <text x="338" y="666" font-size="14" fill="#5F6B64">• REST + JWT (3 perfis) + Swagger</text>
     <text x="338" y="688" font-size="14" fill="#5F6B64">• Spring Data JPA</text>
@@ -79,7 +79,7 @@
     <rect x="740" y="540" width="370" height="250" rx="14" fill="#FFFFFF" stroke="#2E7D4F" stroke-width="1.5"/>
     <circle cx="770" cy="570" r="16" fill="#2E7D4F"/><text x="770" y="576" font-size="16" fill="#fff" text-anchor="middle" font-weight="bold">6</text>
     <text x="796" y="576" font-size="18" font-weight="bold" fill="#1F2A24">Azure SQL Database</text>
-    <text x="758" y="612" font-size="15" fill="#37474F">sql-elosolidario-rm563230</text>
+    <text x="758" y="612" font-size="15" fill="#37474F">sql-elosolidario</text>
     <text x="758" y="637" font-size="15" fill="#37474F">db-elosolidario (Basic)</text>
     <text x="758" y="666" font-size="14" fill="#5F6B64">• 8 tabelas TB_ELO_*</text>
     <text x="758" y="688" font-size="14" fill="#5F6B64">• gatilho de auditoria</text>

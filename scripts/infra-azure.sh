@@ -2,15 +2,14 @@
 set -euo pipefail
 
 # Variáveis
-RM="rm563230"
 LOCATION="chilecentral"
-RESOURCE_GROUP="rg-elosolidario-${RM}"
-SQL_SERVER="sql-elosolidario-${RM}"
+RESOURCE_GROUP="rg-elosolidario"
+SQL_SERVER="sql-elosolidario"
 SQL_DATABASE="db-elosolidario"
 SQL_ADMIN="elosolidarioadmin"
 SQL_ADMIN_PASSWORD="EloSolidario@2026"
-APP_SERVICE_PLAN="plan-elosolidario-${RM}"
-WEB_APP="elo-solidario-${RM}"
+APP_SERVICE_PLAN="plan-elosolidario"
+WEB_APP="elo-solidario"
 JWT_SECRET="ksGqsJt0cGK6Jd8UkBBOzktvdLkrSTOuBAf2PKGt9dLHtuoB"
 RABBITMQ_URL="PREENCHER"
 AI_API_KEY="PREENCHER"

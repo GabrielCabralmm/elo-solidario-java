@@ -10,7 +10,7 @@ variables:
   - name: azureSubscription
     value: conexao-azure-elosolidario
   - name: webAppName
-    value: elo-solidario-rm563230
+    value: elo-solidario
   - name: artefato
     value: elo-solidario-java
   - name: MAVEN_CACHE_FOLDER
